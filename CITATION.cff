@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Gene Ontology Analysis Tool (GOAT)
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Ashtyn R
+    family-names: Mowbray
+repository-code: 'https://github.com/amowbray151/GOAT'
+abstract: >-
+  GOAT is an R Shiny application for Gene Ontology
+  enrichment analysis of differentially expressed genes
+  using clusterProfiler. 
+keywords:
+  - gene ontology
+  - enrichment analysis
+  - RNA-seq
+  - R
+  - Shiny
+license: MIT
+version: 1.0.0
+date-released: '2026-11-10'
