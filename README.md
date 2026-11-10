@@ -1,116 +1,107 @@
-# <p align = "center"><img src="www/GOATicon.svg"></p>
+<p align = "center"><img src="www/GOATicon.svg"></p>
+
+ 
 
 # 
 
-# \# 
+### Gene Ontology Analysis Tool, made with Shiny 
 
-# \### Gene Ontology Analysis Tool, made with Shiny 
+Welcome to GOAT! This ShinyApp uses the clusterProfiler package for R to run Over-Representation Analysis (ORA) GO enrichment. The enrichplot package is used for plotting functions. Supported organisms include:
 
-# Welcome to GOAT! This ShinyApp uses the clusterProfiler package for R to run Over-Representation Analysis (ORA) GO enrichment. The enrichplot package is used for plotting functions. Supported organisms include:
+- Homo sapiens
 
-# \- Homo sapiens
+- Mus musculus
 
-# \- Mus musculus
+- Rattus norvegicus
 
-# \- Rattus norvegicus
+- Saccharomyces cerevisiae
 
-# \- Saccharomyces cerevisiae
+- Drosophila melanogaster
 
-# \- Drosophila melanogaster
+<p align = "center">
+<img width = "50%"; src="images/dplotex.png">
+<img width = "80%"; src="images/tplotex.png">
+</p>
+ 
 
-# 
+### Why should I use this tool over any other?
 
-# \### Why should I use this tool over any other?
+This tool runs clusterProfiler, making it highly customizable. It is also easy to make publication-quality plots.
 
-# This tool runs clusterProfiler, making it highly customizable. It is also easy to make publication-quality plots.
+ 
 
-# 
+Other web-based apps do exist for clusterProfiler, such as NASQAR2 and are equally as customizable, so within clusterProfiler interfaces, it is ultimately up to you on which you choose.
 
-# Other web-based apps do exist for clusterProfiler, such as NASQAR2 and are equally as customizable, so within clusterProfiler interfaces, it is ultimately up to you on which you choose.
+ 
 
-# 
+I also recommend running your enrichment on other softwares. There is a lot of variance between softwares due to annotation databases and mapping algorithms, so the results in one are unlikely to match another. Some examples of other softwares to try are:
 
-# I also recommend running your enrichment on other softwares. There is a lot of variance between softwares due to annotation databases and mapping algorithms, so the results in one are unlikely to match another. Some examples of other softwares to try are:
+ - GOShiny
 
-# \- GOShiny
+- PANTHER
 
-# \- PANTHER
+- g:Profiler
 
-# \- g:Profiler
 
-# <p align = "center">
 
-# &#x20;  <img width = "100%"; src="Images/dplotex.png">
+## Instructions
 
-# </p>
+### Requirements
 
-# <p align = "center">
+- R 4.6 or later (RStudio optional)
 
-# &#x20;  <img width = "100%"; src="Images/tplotex.png">
+- An internet connection for the first install, to download packages
 
-# </p>
+ 
 
-# 
+### Setup
 
-# \## Instructions
+1. Download or clone the repository:
 
-# \### Requirements
+```bash
 
-# \- R 4.6 or later (RStudio optional)
+git clone https://github.com/amowbray151/GOAT.git
 
-# \- An internet connection for the first install, to download packages
+```
 
-# 
+2. Open the `GOAT` folder as a project in RStudio (or start R with the `GOAT` folder as your working directory). `renv` activates automatically.
 
-# \### Setup
+You can do this by typing into the R console:
 
-# 1\. Download or clone the repository:
+```r
 
-# &#x20;  ```bash
+setwd("Path/To/Extracted/GOAT-main")
 
-# &#x20;  git clone https://github.com/amowbray151/GOAT.git
+```
 
-# &#x20;  ```
+For example:
 
-# 2\. Open the `GOAT` folder as a project in RStudio (or start R with the `GOAT` folder as your working directory). `renv` activates automatically.
+```r
 
-# &#x20;  You can do this by typing into the R console:
+setwd("C:/Users/john/Downloads/GOAT-main")
 
-# &#x20;  ```r
+```
 
-# &#x20;  setwd("Path/To/Extracted/GOAT-main")
+4. Install the required packages. In the R console, run:
 
-# &#x20;  ```
+```r
 
-# &#x20;  For example:
+install.packages("renv")
 
-# &#x20;  ```r
+renv::restore()
 
-# &#x20;  setwd("C:/Users/john/Downloads/GOAT-main")
+```
 
-# &#x20;  ```
+This installs the exact package versions recorded in `renv.lock`, including clusterProfiler, enrichplot, and the annotation databases for the supported organisms. The first install can take several minutes.
 
-# 4\. Install the required packages. In the R console, run:
 
-# &#x20;  ```r
+### Running the app
 
-# &#x20;  install.packages("renv")
+In the R console, run:
 
-# &#x20;  renv::restore()
+```r
 
-# &#x20;  ```
+shiny::runApp()
 
-# This installs the exact package versions recorded in `renv.lock`, including clusterProfiler, enrichplot, and the annotation databases for the supported organisms. The first install can take several minutes.
-
-# 
-
-# \### Running the app
-
-# In the R console, run:
-
-# ```r
-
-# shiny::runApp()
-
-# ```
+```
 
