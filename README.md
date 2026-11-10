@@ -20,6 +20,8 @@ Welcome to GOAT! This ShinyApp uses the clusterProfiler package for R to run Ove
 
 <p align = "center">
 <img width = "50%"; src="images/dplotex.png">
+<br>
+<br>
 <img width = "80%"; src="images/tplotex.png">
 </p>
  
@@ -54,7 +56,7 @@ I also recommend running your enrichment on other softwares. There is a lot of v
 
  
 
-### Setup
+### First Time Setup
 
 1. Download or clone the repository:
 
@@ -63,6 +65,7 @@ I also recommend running your enrichment on other softwares. There is a lot of v
 git clone https://github.com/amowbray151/GOAT.git
 
 ```
+<p align = "center"><img width = "50%"; src="images/cloneex.png"></p>
 
 2. Open the `GOAT` folder as a project in RStudio (or start R with the `GOAT` folder as your working directory). `renv` activates automatically.
 
@@ -92,7 +95,7 @@ renv::restore()
 
 ```
 
-This installs the exact package versions recorded in `renv.lock`, including clusterProfiler, enrichplot, and the annotation databases for the supported organisms. The first install can take several minutes.
+This installs the required packages, including clusterProfiler, enrichplot, and the annotation databases for the supported organisms. The first install can take several minutes.
 
 
 ### Running the app
@@ -104,4 +107,3 @@ In the R console, run:
 shiny::runApp()
 
 ```
-
