@@ -50,11 +50,13 @@ I also recommend running your enrichment on other softwares. There is a lot of v
 
 ### Requirements
 
-- R 4.6 or later (RStudio optional)
+- R 4.6 (RStudio optional) <https://www.r-project.org/>
+  
+- rtools45 <https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html>.
 
 - An internet connection for the first install, to download packages
 
- 
+
 
 ### First Time Setup
 
@@ -84,6 +86,13 @@ For example:
 setwd("C:/Users/john/Downloads/GOAT-main")
 
 ```
+
+3. (optional) Run the following command in the console to verify rtools45 installation:
+```r
+Sys.which("make")                  # should point into rtools45\usr\bin
+system("g++ --version")            # should print a version, not an error
+```
+
 
 4. Install the required packages. In the R console, run:
 
