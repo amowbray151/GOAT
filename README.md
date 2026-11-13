@@ -99,12 +99,22 @@ system("g++ --version")            # should print a version, not an error
 ```r
 
 install.packages("renv")
+install.packages("BiocManager")
 
 renv::restore()
 
 ```
+This may take several minutes.
 
-This installs the required packages, including clusterProfiler, enrichplot, and the annotation databases for the supported organisms. The first install can take several minutes.
+Some errors might crop up when installing Bioconductor packages like GO.db. Installing them manually may be required:
+
+```r
+# E.g.
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("GO.db")
+```
 
 
 ### Running the app
